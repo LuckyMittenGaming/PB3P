@@ -551,7 +551,7 @@
             scrollTrigger: {
               trigger: ".reel",
               start: "center center", // Lock in the middle
-              end: () => `+=${Math.max(700, totalScroll + 500)}`,
+              end: () => `+=${totalScroll}`,
               scrub: 1,
               pin: true,
               anticipatePin: 1,
@@ -613,6 +613,30 @@
           y: 0, opacity: 1, duration: 0.6, ease: "power2.out", delay: 0.3,
           scrollTrigger: { trigger: ".contact", start: "bottom bottom" }
         });
+        // --- NEW: TOOLTIP KILL SWITCH ---
+        if (window.ScrollTrigger) {
+          ScrollTrigger.create({
+            trigger: "#services",
+            start: "top bottom",
+            end: "bottom top",
+            onLeave: () => hideTooltip(),
+            onLeaveBack: () => hideTooltip(),
+            onEnter: () => hideTooltip(),
+            onEnterBack: () => hideTooltip()
+          });
+        }
+
+        function hideTooltip() {
+          const tooltip = document.getElementById("tooltip");
+          const previewPulse = document.querySelector(".previewPulse");
+          const previewLabel = document.getElementById("previewLabel");
+          
+          if (tooltip) tooltip.style.opacity = "0";
+          if (previewPulse) previewPulse.classList.remove("on");
+          if (previewLabel) previewLabel.textContent = "Hover a service";
+          document.documentElement.style.setProperty("--accent", "var(--accentOff)");
+        }
+        // --- END KILL SWITCH ---
       }
     })();
   </script>
