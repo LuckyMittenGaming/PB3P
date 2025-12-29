@@ -93,10 +93,10 @@ button{ font: inherit; color: inherit; }
   gap: 10px;
   padding: 4px 8px;
 }
-.nav-brand-logo{ /* New style for nav logo */
-  height: 24px; /* Adjust size as needed */
+.nav-brand-logo{
+  height: 70px;
   width: auto;
-  filter: invert(1); /* Make SVG white */
+  filter: invert(0);
 }
 
 .nav{
@@ -140,9 +140,15 @@ button{ font: inherit; color: inherit; }
   border-color: rgba(245,245,245,.32);
 }
 .btn-contact-logo{
-  height: 18px; /* Adjust size as needed */
+  height: 18px;
   width: auto;
-  filter: invert(1); /* Make SVG white */
+  filter: invert(1);
+}
+/* SVG Icon Style for Header */
+.btn-contact-icon {
+  width: 16px; 
+  height: 16px;
+  stroke: currentColor;
 }
 
 
@@ -152,7 +158,7 @@ button{ font: inherit; color: inherit; }
   display: grid;
   align-items: center;
   position: relative;
-  padding: 0; /* Remove padding as content is moved */
+  padding: 0;
 }
 .heroBg{
   position: absolute;
@@ -203,14 +209,14 @@ button{ font: inherit; color: inherit; }
 
 /* HERO CONTENT REVEAL SECTION */
 .hero-content-reveal {
-  min-height: 100vh; /* Ensure it takes full viewport height */
+  min-height: 100vh;
   display: grid;
   align-items: center;
   position: relative;
-  padding: 120px 0 70px; /* Restore original hero padding */
+  padding: 120px 0 70px;
   background: radial-gradient(1200px 800px at 60% 20%, rgba(84,210,255,.06), transparent 60%),
               radial-gradient(900px 700px at 20% 80%, rgba(255,36,87,.05), transparent 55%),
-              var(--bg); /* Match body background */
+              var(--bg);
 }
 
 .hero-content-reveal .wrap {
@@ -452,32 +458,32 @@ button{ font: inherit; color: inherit; }
 /* REEL BACKGROUND REVEAL TEXT */
 .reelBgText {
   position: absolute;
-  inset: 0; /* Full width/height of the reel container */
+  inset: 0; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 0; /* Sit behind the cards */
-  pointer-events: none; /* Let clicks pass through to cards */
+  pointer-events: none; 
   overflow: hidden;
 }
 
 .reelBgText span {
-  font-size: clamp(80px, 15vw, 250px); /* Massive responsive text */
+  font-size: clamp(80px, 15vw, 250px);
   font-weight: 800;
   line-height: 0.85;
   color: transparent;
   -webkit-text-stroke: 2px rgba(255, 255, 255, 0.15); /* Outline style */
   text-transform: uppercase;
   white-space: nowrap;
-  opacity: 0; /* Start hidden, GSAP will reveal it */
-  transform: translateY(50px); /* Start slightly lower */
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 
-/* Card stage: turd sits behind media (hyper-real compositing) */
+/* Card stage */
 .reelCard{
-  flex: 0 0 clamp(280px, 34vw, 520px); /* Corrected width */
+  flex: 0 0 clamp(280px, 34vw, 520px);
   border-radius: calc(var(--radius) + 6px);
   outline: none;
 }
@@ -488,35 +494,6 @@ button{ font: inherit; color: inherit; }
   background: rgba(0,0,0,.20);
   box-shadow: var(--shadow);
   border: 1px solid rgba(245,245,245,.12);
-}
-
-.turdBehind{
-  position: absolute;
-  inset: auto auto 8% 8%;
-  width: clamp(170px, 24vw, 360px);
-  height: auto;
-  z-index: 1;
-  pointer-events: none;
-  filter:
-    drop-shadow(0 26px 55px rgba(0,0,0,.62))
-    saturate(1.02)
-    contrast(1.04);
-  opacity: .02;
-  transform-origin: 50% 70%;
-}
-
-/* Specular pass (glint) */
-.turdSpec{
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0;
-  background:
-    radial-gradient(240px 190px at 35% 45%, rgba(255,255,255,.12), transparent 70%),
-    linear-gradient(115deg, transparent 0%, rgba(255,255,255,.20) 45%, transparent 65%);
-  mix-blend-mode: screen;
-  filter: blur(0.2px);
 }
 
 .reelMedia{
@@ -543,11 +520,11 @@ button{ font: inherit; color: inherit; }
   transform: translateY(8px);
   opacity: .92;
   transition: transform .25s ease, opacity .25s ease;
-  display: flex; /* Added for reveal text */
-  flex-direction: column; /* Added for reveal text */
-  justify-content: flex-end; /* Added for reveal text */
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-end; 
 }
-.reelRevealText{ /* New style for reveal text */
+.reelRevealText{ 
   font-size: clamp(24px, 3vw, 40px);
   font-weight: 700;
   letter-spacing: .08em;
@@ -583,7 +560,7 @@ button{ font: inherit; color: inherit; }
 
 .reelHint{ margin-top: 10px; color: rgba(245,245,245,.58); font-size: 12px; }
 
-.reelNav{ /* Removed as per request */
+.reelNav{ 
   display: none;
 }
 
@@ -607,7 +584,7 @@ button{ font: inherit; color: inherit; }
   transition: transform .18s ease, border-color .18s ease, background .18s ease;
   position: relative;
   overflow: hidden;
-  outline: none; /* Remove default focus outline */
+  outline: none;
 }
 .serviceTile:focus-visible {
   border-color: var(--accent);
@@ -752,9 +729,10 @@ button{ font: inherit; color: inherit; }
 }
 
 /* CONTACT */
-.contact{
+.contact {
   border-top: 1px solid rgba(245,245,245,.08);
-  padding-bottom: 96px; /* Restore standard section padding, turdGroup is now inside footer */
+  /* Changed from 96px to 10px to remove the massive gap at the bottom */
+  padding-bottom: 10px; 
 }
 .contactCard{
   border: 1px solid rgba(245,245,245,.14);
@@ -817,24 +795,29 @@ button{ font: inherit; color: inherit; }
   letter-spacing: .12em;
 }
 
-.footer{
-  position: relative; /* Make footer the positioning context for turdGroup */
-  padding: 40px 0; /* Adjust padding as needed */
-  margin-top: 0; /* Remove margin-top from footer itself */
+.footer {
+  position: relative;
+  /* Reduced padding-top to 0 to pull it closer to the contact card */
+  padding: 0 0 40px 0; 
+  margin-top: 30px; /* Adds a small, controlled gap from the card above */
   color: rgba(245,245,245,.55);
   font-size: 0.9rem;
+  
+  /* THIS CODE CENTERS EVERYTHING (Desktop & Mobile) */
   display: flex;
-  flex-direction: column; /* Stack content and turd group */
-  align-items: center;
-  gap: 0; /* Gap between turd group and footer content is handled by turdGroup margin-bottom */
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  
+  gap: 0;
 }
-.footer-content-inner { /* New wrapper for original footer content */
+.footer-content-inner {
   display: flex;
   gap: 10px;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px; /* Space between turd group and footer text */
+  margin-top: 10px;
 }
 .footerSep{ opacity: .4; }
 .toTop{
@@ -843,59 +826,56 @@ button{ font: inherit; color: inherit; }
 }
 
 /* Turd Group with Comic Bubble */
-.turdGroup{
-  position: relative; /* Relative to footer */
+.turdGroup {
+  position: relative;
   left: auto;
   bottom: auto;
-  transform: none; /* Remove absolute positioning transforms */
+  transform: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0;
+  align-items: center; /* Double check centering */
+  justify-content: center;
   pointer-events: none;
-  z-index: 1; /* Ensure it's above other content but below overlays */
-  opacity: 0; /* Hidden by default, animated in by GSAP */
-  margin-bottom: 10px; /* Space between turd group and footer-content-inner */
+  z-index: 1;
+  opacity: 0; /* GSAP handles the fade in */
+  margin-bottom: 5px; /* Tiny space between turds and copyright text */
 }
 .turdGroup .turd{
-  width: clamp(180px, 20vw, 300px); /* Make the group image larger */
+  width: clamp(180px, 20vw, 300px);
   height: auto;
-  opacity: 1; /* Original image, no filter opacity */
-  filter: none; /* Remove all filters */
-  mix-blend-mode: normal; /* Remove mix-blend-mode */
-}
-.turdGroup .goldTurd{
-  /* No specific filter for gold turd, it's the original image */
+  opacity: 1;
+  filter: none;
+  mix-blend-mode: normal;
 }
 .comicBubble{
-  position: absolute; /* Absolute relative to turdGroup */
-  bottom: calc(50% + 2px); /* 5px above the turd group image */
-  left: 50%; /* Center horizontally above turd group */
-  transform: translateX(-50%) translateY(20px); /* For animation, and initial offset */
-  background: var(--fg); /* White bubble */
-  color: var(--bg); /* Dark text */
+  position: absolute;
+  bottom: calc(50% + 2px);
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--fg);
+  color: var(--bg);
   padding: 10px 15px;
-  border-radius: 20px 20px 20px 0; /* Speech bubble shape */
+  border-radius: 20px 20px 20px 0;
   font-family: "IBM Plex Mono", monospace;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: .05em;
   white-space: nowrap;
-  opacity: 0; /* Hidden by default, animated in by GSAP */
+  opacity: 0;
   pointer-events: none;
   z-index: 2;
 }
 .comicBubble::after{
   content: '';
   position: absolute;
-  bottom: -10px; /* Tail of the bubble */
-  left: 50%; /* Center tail */
-  transform: translateX(-50%); /* Adjust for centering */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid var(--fg); /* White tail */
+  border-top: 10px solid var(--fg);
 }
 
 
@@ -938,18 +918,263 @@ button{ font: inherit; color: inherit; }
   .serviceGrid{ grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 540px){
-  .topbar{ top: 10px; }
-  .nav{ gap: 6px; }
+  /* 1. Tighter padding on the container itself */
+  .topbar{ 
+    top: 10px; 
+    padding: 8px 8px; /* Reduced from 12px to 8px to buy room */
+    width: calc(100vw - 24px); /* Ensure it fits nicely with small margins */
+  }
+
+  /* 2. Shrink the logo on mobile (70px is too big for 360px screens) */
+  .nav-brand-logo {
+    height: 40px; /* Reduced from 70px */
+  }
+  
+  /* 3. Remove extra padding around the logo link */
+  .brand {
+    padding: 0; 
+  }
+
+  /* 4. Tighter Nav Gap */
+  .nav{ gap: 8px; }
   .navLink{ display: none; }
-  .navCtaGroup{ flex-direction: column; gap: 4px; } /* Stack contact buttons */
+  
+  /* Mobile Button Logic: Side-by-Side Circle Icons */
+  .navCtaGroup{ flex-direction: row; gap: 8px; }
+  .btn.contact-btn span { display: none; }
+  .btn.contact-btn {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .btn-contact-icon {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+  }
+
+  /* Existing mobile adjustments */
   .serviceGrid{ grid-template-columns: 1fr; }
   .reelInner{ padding: 10px 18px; }
-  .scrollHint{ bottom: 10px; gap: 0px; } /* Adjust scroll hint position and gap */
-  .hero-content-reveal .heroMeta{ margin-top: 10px; gap: 6px; } /* Adjust hero meta position and gap */
-  .turdGroup{ left: 50%; bottom: 10px; transform: translateX(-50%); } /* Center turd group on mobile */
-  .comicBubble{ left: 50%; transform: translateX(-50%) translateY(20px); border-radius: 20px 20px 20px 0; } /* Center bubble on mobile */
-  .comicBubble::after{ left: 50%; transform: translateX(-50%); border-top: 10px solid var(--fg); } /* Adjust bubble tail for mobile */
+  .scrollHint{ bottom: 10px; gap: 0px; }
+  .hero-content-reveal .heroMeta{ margin-top: 10px; gap: 6px; }
+  .turdGroup{ left: auto; transform: none; bottom: auto; margin-bottom: 10px; }
+  .comicBubble{ left: 50%; transform: translateX(-50%) translateY(20px); border-radius: 20px 20px 20px 0; }
+  .comicBubble::after{ left: 50%; transform: translateX(-50%); border-top: 10px solid var(--fg); }
 }
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+/* --- RETURN VISITOR OVERRIDES --- */
+
+/* If the reel is "unlocked", allow standard scrolling */
+.reel.is-unlocked {
+  overflow-x: auto; /* Allow side scrolling */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; /* Smooth touch scroll */
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+/* Hide the scrollbar for aesthetics */
+.reel.is-unlocked::-webkit-scrollbar {
+  display: none; 
+}
+.reel.is-unlocked {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Ensure inner container fits content naturally */
+.reel.is-unlocked .reelInner {
+  width: max-content;
+  padding-right: 40px; /* End padding */
+}
+
+/* Disable the background text if unlocked (optional, keeps it clean) */
+.reel.is-unlocked .reelBgText {
+  display: none;
+}
+/* CONTACT FORM STYLES */
+.pb3-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px; /* Aligns with the 'Let's make something' header */
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+.input-group.full {
+  width: 100%;
+}
+
+/* Base Field Style (Matches your dark/tech vibe) */
+.input-field {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(245,245,245,0.15);
+  border-radius: 12px; /* Slightly squarer than buttons */
+  padding: 14px 16px;
+  color: var(--fg);
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover/Focus States */
+.input-field:hover {
+  border-color: rgba(245,245,245,0.3);
+  background: rgba(245,245,245,0.03);
+}
+
+.input-field:focus {
+  border-color: var(--accent); /* Uses your blue/red accent */
+  box-shadow: 0 0 0 1px var(--accent);
+  background: rgba(0,0,0,0.5);
+}
+
+/* Placeholder styling */
+.input-field::placeholder {
+  color: rgba(245,245,245,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Select Dropdown Styling */
+.select-field {
+  appearance: none; /* Remove default arrow */
+  cursor: pointer;
+  color: rgba(245,245,245,0.7); /* Default text color */
+}
+
+.select-field:focus {
+  color: var(--fg);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: rgba(245,245,245,0.4);
+}
+
+/* Textarea specific */
+.area-field {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* Submit Button Tweaks */
+.form-submit-btn {
+  margin-top: 8px;
+  justify-content: space-between; /* Spreads text and arrow */
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* --- PRO POLISH: BROWSER DEFAULTS --- */
+
+/* 1. Custom Scrollbar (Chrome/Edge/Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245,245,245,0.2);
+  border-radius: 99px;
+  border: 2px solid var(--bg); /* Creates padding effect */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245,245,245,0.4);
+}
+
+/* 2. Custom Text Selection Color */
+::selection {
+  background: var(--accentOff); /* Brand Red */
+  color: #fff;
+}
+
+/* 3. Smooth Image Rendering */
+img, video {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* FIX: Force the form button to match the dark theme (Global) */
+button.form-submit-btn {
+  background: rgba(255,255,255,.08) !important;
+  color: var(--fg) !important;
+  border: 1px solid rgba(255,255,255,.24);
+  cursor: pointer;
+}
+button.form-submit-btn:hover {
+  background: rgba(255,255,255,.15) !important;
+  transform: translateY(-1px);
+}
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media (max-width: 540px) {
+  /* Tighter padding on the container */
+  .topbar{ 
+    top: 10px; 
+    padding: 8px 8px;
+    width: calc(100vw - 24px);
+  }
+
+  /* Shrink logo */
+  .nav-brand-logo { height: 40px; }
+  .brand { padding: 0; }
+
+  /* Nav Gap */
+  .nav{ gap: 8px; }
+  .navLink{ display: none; }
+  
+  /* Mobile Icons */
+  .navCtaGroup{ flex-direction: row; gap: 8px; }
+  .btn.contact-btn span { display: none; }
+  .btn.contact-btn {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .btn-contact-icon { width: 18px; height: 18px; margin: 0; }
+
+  /* Layout Adjustments */
+  .serviceGrid{ grid-template-columns: 1fr; }
+  .reelInner{ padding: 10px 18px; }
+  .scrollHint{ bottom: 10px; gap: 0px; }
+  .hero-content-reveal .heroMeta{ margin-top: 10px; gap: 6px; }
+  
+  /* FIX: Added the missing dot (.) below */
+  .turdGroup{ left: auto; transform: none; bottom: auto; margin-bottom: 10px; }
+  
+  .comicBubble{ left: 50%; transform: translateX(-50%) translateY(20px); border-radius: 20px 20px 20px 0; }
+  .comicBubble::after{ left: 50%; transform: translateX(-50%); border-top: 10px solid var(--fg); }
+  
+  /* Stack form fields on mobile */
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
