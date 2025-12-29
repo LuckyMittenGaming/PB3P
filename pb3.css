@@ -352,14 +352,14 @@ button{ font: inherit; color: inherit; }
 .turd-i {
   display: inline-block;
   /* The !important ensures nothing else can make it huge */
-  height: 0.9em !important; 
+  height: 1.05em !important; 
   /* A backup constraint just in case */
   max-width: 1.2em; 
   width: auto;
   /* Fine-tuned alignment */
   vertical-align: -0.1em; 
   /* Adjusted squeeze */
-  margin: 0 -0.05em; 
+  margin: 0 -0.04em; 
 }
 /* Sections */
 .section{ padding: 96px 0; position: relative; }
