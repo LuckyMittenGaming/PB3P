@@ -359,7 +359,7 @@ button{ font: inherit; color: inherit; }
   /* Fine-tuned alignment */
   vertical-align: -0.1em; 
   /* Adjusted squeeze */
-  margin: 0 -1.00em; 
+  margin: 0 -0.12em; 
 }
 /* Sections */
 .section{ padding: 96px 0; position: relative; }
