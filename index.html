@@ -8,28 +8,23 @@
 
   <link rel="stylesheet" href="./pb3.css" />
 
-  <!-- Fonts (2 max) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-  <!-- Ambient film grain overlay -->
   <div class="grain" aria-hidden="true"></div>
   <div class="scanlines" aria-hidden="true"></div>
 
-  <!-- Background Audio -->
   <audio id="backgroundAudio" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/rave-instrumental-1-375689.mp3" loop preload="auto"></audio>
 
-  <!-- Floating nav -->
   <header class="topbar">
     <a class="brand" href="#top" aria-label="PB3 Productions Home">
-      <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Untitled-design14.svg" alt="PB3 Productions Logo" class="nav-brand-logo">
+      <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS1.svg" alt="PB3 Productions Logo" class="nav-brand-logo">
     </a>
 
     <nav class="nav">
@@ -38,11 +33,16 @@
       <a href="#about" class="navLink">About</a>
       <div class="navCtaGroup">
         <a href="tel:+15551234567" class="btn contact-btn" aria-label="Call PB3 Productions">
-          <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS.svg" alt="PB3 Logo" class="btn-contact-logo">
+          <svg class="btn-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
           <span>Call</span>
         </a>
         <a href="mailto:hello@pb3productions.com" class="btn contact-btn" aria-label="Email PB3 Productions">
-          <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PRODUCTIONS.svg" alt="PB3 Logo" class="btn-contact-logo">
+          <svg class="btn-contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
           <span>Email</span>
         </a>
       </div>
@@ -50,12 +50,11 @@
   </header>
 
   <main>
-    <!-- HERO VIDEO -->
     <section class="hero" aria-label="PB3 Hero">
       <div class="heroBg" aria-hidden="true">
         <video class="heroVid" autoplay muted loop playsinline preload="metadata"
-          poster="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1800&q=60">
-          <source src="https://i.imgur.com/ieHkwsj.mp4" type="video/mp4">
+          poster="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Untitled-design36.png">
+          <source src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Productions1.mp4" type="video/mp4">
         </video>
         <div class="heroVignette"></div>
       </div>
@@ -65,7 +64,6 @@
       </div>
     </section>
 
-    <!-- HERO CONTENT REVEAL -->
     <section id="hero-content-reveal" class="section hero-content-reveal">
       <div class="wrap">
         <div class="heroKicker hero-reveal-item">Production + Post</div>
@@ -99,7 +97,6 @@
       </div>
     </section>
 
-    <!-- STATEMENT -->
     <section class="section statement">
       <div class="wrap">
         <div class="sectionHead">
@@ -127,7 +124,6 @@
       </div>
     </section>
 
-    <!-- MARQUEE INTERRUPT -->
     <section class="interrupt" aria-label="PB3 Marquee">
       <div class="marquee">
         <div class="marqueeTrack">
@@ -147,7 +143,6 @@
       </div>
     </section>
 
-    <!-- WORK / REEL (Horizontal scroll, turds slide out behind cards) -->
     <section id="work" class="section work">
       <div class="wrap">
         <div class="sectionHead">
@@ -166,19 +161,15 @@
           <span>COOL</span>
           <span>SHIT</span>
         </div>
+
         <div class="reelInner" id="reelInner">
 
-          <!-- CARD 1 -->
-          <article class="reelCard" tabindex="0" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/24.png" data-turd-side="left" data-reveal-text="WE">
+          <article class="reelCard" tabindex="0" data-reveal-text="WE">
             <div class="reelStage">
-              <img class="turdBehind" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/24.png" alt="" aria-hidden="true">
-              <div class="turdSpec" aria-hidden="true"></div>
-
               <div class="reelMedia">
-                <!-- Swap to video by replacing <img> with <video class="cardVid"...> -->
                 <video class="cardVid" autoplay loop muted playsinline>
-                <source src="https://i.imgur.com/Ap8pNcl.mp4" type="video/mp4">
-              </video>
+                  <source src="https://i.imgur.com/Ap8pNcl.mp4" type="video/mp4">
+                </video>
                 <div class="reelOverlay">
                   <div class="reelRevealText">WE</div>
                   <div class="reelTitle">BRAND / RUN SERIES</div>
@@ -188,16 +179,12 @@
             </div>
           </article>
 
-          <!-- CARD 2 -->
-          <article class="reelCard" tabindex="0" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/25.png" data-turd-side="right" data-reveal-text="SHOOT">
+          <article class="reelCard" tabindex="0" data-reveal-text="SHOOT">
             <div class="reelStage">
-              <img class="turdBehind" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/25.png" alt="" aria-hidden="true">
-              <div class="turdSpec" aria-hidden="true"></div>
-
               <div class="reelMedia">
                 <video class="cardVid" autoplay loop muted playsinline>
-                <source src="https://i.imgur.com/yloxb75.mp4" type="video/mp4">
-              </video>
+                  <source src="https://i.imgur.com/yloxb75.mp4" type="video/mp4">
+                </video>
                 <div class="reelOverlay">
                   <div class="reelRevealText">SHOOT</div>
                   <div class="reelTitle">FASHION / NIGHT CUTS</div>
@@ -207,16 +194,12 @@
             </div>
           </article>
 
-          <!-- CARD 3 -->
-          <article class="reelCard" tabindex="0" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/26.png" data-turd-side="left" data-reveal-text="COOL">
+          <article class="reelCard" tabindex="0" data-reveal-text="COOL">
             <div class="reelStage">
-              <img class="turdBehind" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/26.png" alt="" aria-hidden="true">
-              <div class="turdSpec" aria-hidden="true"></div>
-
               <div class="reelMedia">
                 <video class="cardVid" autoplay loop muted playsinline>
-                <source src="https://i.imgur.com/Zk7xv85.mp4" type="video/mp4">
-              </video>
+                  <source src="https://i.imgur.com/Zk7xv85.mp4" type="video/mp4">
+                </video>
                 <div class="reelOverlay">
                   <div class="reelRevealText">COOL</div>
                   <div class="reelTitle">MUSIC / LIVE SESSION</div>
@@ -226,16 +209,12 @@
             </div>
           </article>
 
-          <!-- CARD 4 -->
-          <article class="reelCard" tabindex="0" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/28.png" data-turd-side="right" data-reveal-text="SHIT">
+          <article class="reelCard" tabindex="0" data-reveal-text="SHIT">
             <div class="reelStage">
-              <img class="turdBehind" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/28.png" alt="" aria-hidden="true">
-              <div class="turdSpec" aria-hidden="true"></div>
-
               <div class="reelMedia">
                 <video class="cardVid" autoplay loop muted playsinline>
-                <source src="https://i.imgur.com/j7xXmCo.mp4" type="video/mp4">
-              </video>
+                  <source src="https://i.imgur.com/j7xXmCo.mp4" type="video/mp4">
+                </video>
                 <div class="reelOverlay">
                   <div class="reelRevealText">SHIT</div>
                   <div class="reelTitle">DOC / STREET STORIES</div>
@@ -245,16 +224,12 @@
             </div>
           </article>
 
-          <!-- CARD 5 -->
-          <article class="reelCard" tabindex="0" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/29.png" data-turd-side="left" data-reveal-text="IMPACT">
+          <article class="reelCard" tabindex="0" data-reveal-text="IMPACT">
             <div class="reelStage">
-              <img class="turdBehind" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/29.png" alt="" aria-hidden="true">
-              <div class="turdSpec" aria-hidden="true"></div>
-
               <div class="reelMedia">
                 <video class="cardVid" autoplay loop muted playsinline>
-                <source src="https://i.imgur.com/XxEqYCf.mp4" type="video/mp4">
-              </video>
+                  <source src="https://i.imgur.com/XxEqYCf.mp4" type="video/mp4">
+                </video>
                 <div class="reelOverlay">
                   <div class="reelRevealText">IMPACT</div>
                   <div class="reelTitle">SPOT / NEON NARRATIVE</div>
@@ -265,17 +240,8 @@
           </article>
 
         </div>
-        <!-- Reel Nav buttons removed as per request -->
       </div>
 
-      <div class="wrap">
-        <div class="reelHint mono">
-          Want micro-loops? Replace each card image with a muted looping MP4 video.
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
     <section id="services" class="section services">
       <div class="wrap">
         <div class="sectionHead">
@@ -285,32 +251,32 @@
         </div>
 
         <div class="serviceGrid">
-          <button class="serviceTile" type="button" data-service="Commercial" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/30.png">
+          <button class="serviceTile" type="button" data-service="Commercial">
             <span class="serviceBig">Commercial</span>
             <span class="serviceSmall mono">Concept • Shoot • Post</span>
           </button>
 
-          <button class="serviceTile" type="button" data-service="Fashion" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/27.png">
+          <button class="serviceTile" type="button" data-service="Fashion">
             <span class="serviceBig">Fashion</span>
             <span class="serviceSmall mono">Editorial • Runway • Lookbooks</span>
           </button>
 
-          <button class="serviceTile" type="button" data-service="Music" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/31.png">
+          <button class="serviceTile" type="button" data-service="Music">
             <span class="serviceBig">Music</span>
             <span class="serviceSmall mono">Videos • Sessions • Promos</span>
           </button>
 
-          <button class="serviceTile" type="button" data-service="Documentary" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/28.png">
+          <button class="serviceTile" type="button" data-service="Documentary">
             <span class="serviceBig">Documentary</span>
             <span class="serviceSmall mono">Story • Truth • Texture</span>
           </button>
 
-          <button class="serviceTile" type="button" data-service="Narrative" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/29.png">
+          <button class="serviceTile" type="button" data-service="Narrative">
             <span class="serviceBig">Narrative</span>
             <span class="serviceSmall mono">Shorts • Branded films</span>
           </button>
 
-          <button class="serviceTile" type="button" data-service="Post" data-turd="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/25.png">
+          <button class="serviceTile" type="button" data-service="Post">
             <span class="serviceBig">Post</span>
             <span class="serviceSmall mono">Edit • Color • Sound</span>
           </button>
@@ -323,10 +289,8 @@
           </div>
         </div>
       </div>
-
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="section about">
       <div class="wrap">
         <div class="sectionHead">
@@ -357,11 +321,7 @@
           </div>
 
           <figure class="portrait">
-            <img
-              src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PB3-Camera-with-logo.png"
-              alt="PB3 Camera with logo"
-              loading="lazy"
-            />
+            <img src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/PB3-Camera-with-logo.png" alt="PB3 Camera with logo" loading="lazy" />
             <figcaption class="mono">
               Replace with your photo or a behind-the-scenes still.
             </figcaption>
@@ -370,7 +330,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section contact">
       <div class="wrap">
         <div class="contactCard">
@@ -393,22 +352,47 @@
           </div>
 
           <div class="contactRight">
-            <div class="slab mono">Typical deliverables</div>
-            <div class="deliverables">
-              <div class="delItem"><span class="delNum mono">01</span> Launch videos</div>
-              <div class="delItem"><span class="delNum mono">02</span> Ads + social cutdowns</div>
-              <div class="delItem"><span class="delNum mono">03</span> BTS + doc moments</div>
-              <div class="delItem"><span class="delNum mono">04</span> Photo + motion packages</div>
-            </div>
+  <form class="pb3-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    
+    <div class="form-row">
+      <div class="input-group">
+        <input class="mono input-field" type="text" name="name" placeholder="Name" required>
+      </div>
+      <div class="input-group">
+        <input class="mono input-field" type="email" name="email" placeholder="Email" required>
+      </div>
+    </div>
 
-            <a class="btn primary wide" href="mailto:hello@pb3productions.com?subject=PB3%20Shoot%20Request&body=Hey%20PB3%2C%0A%0AWe%27re%20looking%20to%20shoot%20_____%20in%20_____%20around%20_____.%0A%0ABudget%20range%3A%20_____%0ATimeline%3A%20_____%0ALink%20references%3A%20_____%0A%0AThanks!">
-              Start a Project
-            </a>
-          </div>
-        </div>
+    <div class="form-row">
+      <div class="input-group full">
+        <select class="mono input-field select-field" name="service">
+          <option value="" disabled selected>Project Type</option>
+          <option value="Commercial">Commercial / Ad</option>
+          <option value="Music Video">Music Video</option>
+          <option value="Fashion">Fashion / Editorial</option>
+          <option value="Documentary">Documentary</option>
+          <option value="Narrative">Narrative / Film</option>
+          <option value="Other">Other</option>
+        </select>
+        <div class="select-arrow">↓</div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="input-group full">
+        <textarea class="mono input-field area-field" name="message" rows="4" placeholder="Tell us the vision, timeline, or rough budget..." required></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="btn primary wide form-submit-btn">
+      <span>Send Request</span>
+      <span class="mono">→</span>
+    </button>
+  
+  </form>
+</div>
 
         <footer class="footer mono">
-          <!-- Turd Group with Comic Bubble -->
           <div class="turdGroup">
             <div class="comicBubble">We Shoot Cool Shit!</div>
             <img class="turd goldTurd" src="https://lasvegaspartybuses.com/wp-content/uploads/2025/12/Group-of-gold-turds2.svg" alt="Group of gold turds" aria-hidden="true">
@@ -423,7 +407,6 @@
     </section>
   </main>
 
-  <!-- Floating tooltip -->
   <div class="tooltip" id="tooltip" role="status" aria-live="polite" aria-hidden="true">
     <div class="tooltipInner">
       <div class="tooltipTitle" id="tooltipTitle">Service</div>
@@ -435,25 +418,28 @@
     (() => {
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+      // 1. Check if user has seen the reel animation before
+      const hasSeenReel = localStorage.getItem("pb3_reel_seen") === "true";
+      const reelContainer = document.querySelector(".reel");
+
       // Year
       const yearEl = document.getElementById("year");
-      yearEl.textContent = String(new Date().getFullYear());
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-      // Background Audio Control
+      // Audio Logic
       const backgroundAudio = document.getElementById("backgroundAudio");
       const soundToggle = document.getElementById("soundToggle");
-      const heroVid = document.querySelector(".heroVid"); // Still mute this one
+      const heroVid = document.querySelector(".heroVid");
       let soundOn = false;
 
       soundToggle?.addEventListener("click", () => {
         soundOn = !soundOn;
         soundToggle.setAttribute("aria-pressed", String(soundOn));
-        
-        if (heroVid) heroVid.muted = true; // Always mute hero video
+        if (heroVid) heroVid.muted = true; 
 
         if (soundOn) {
           backgroundAudio.play().catch(e => console.error("Audio play failed:", e));
-          backgroundAudio.volume = 1; // Start at full volume
+          backgroundAudio.volume = 1; 
         } else {
           backgroundAudio.pause();
           backgroundAudio.volume = 0;
@@ -465,13 +451,12 @@
         document.documentElement.style.setProperty("--accent", soundOn ? "var(--accentOn)" : "var(--accentOff)");
       });
 
-      // Tooltip + services cameo
-      const previewLabel = document.getElementById("previewLabel");
-      const previewPulse = document.querySelector(".previewPulse");
+      // Tooltip Logic
       const tooltip = document.getElementById("tooltip");
       const tooltipTitle = document.getElementById("tooltipTitle");
       const tooltipText = document.getElementById("tooltipText");
-
+      const tiles = document.querySelectorAll(".serviceTile");
+      
       const serviceCopy = {
         "Commercial": "Launch videos, ads, social cutdowns, product stories.",
         "Fashion": "Editorial energy, runway speed, clean direction.",
@@ -481,62 +466,42 @@
         "Post": "Edit rhythm, color taste, sound polish."
       };
 
-      const tiles = document.querySelectorAll(".serviceTile");
       tiles.forEach((tile) => {
         const name = tile.getAttribute("data-service") || "Service";
         const desc = serviceCopy[name] || "Preview";
 
         const onEnter = (e) => {
-          if (previewLabel) previewLabel.textContent = name;
           document.documentElement.style.setProperty("--accent", "var(--accentOn)");
-          if (previewPulse) previewPulse.classList.add("on");
-
-          if (tooltip && tooltipTitle && tooltipText) {
+          if (tooltip) {
             tooltipTitle.textContent = name;
             tooltipText.textContent = desc;
-            tooltip.setAttribute("aria-hidden", "false");
             tooltip.style.opacity = "1";
             positionTooltip(e);
           }
         };
 
-        const onMove = (e) => {
-          positionTooltip(e);
-        };
+        const onMove = (e) => positionTooltip(e);
 
         const onLeave = () => {
-          if (previewLabel) previewLabel.textContent = "Hover a service";
           document.documentElement.style.setProperty("--accent", "var(--accentOff)");
-          if (previewPulse) previewPulse.classList.remove("on");
-
-          if (tooltip) {
-            tooltip.setAttribute("aria-hidden", "true");
-            tooltip.style.opacity = "0";
-          }
+          if (tooltip) tooltip.style.opacity = "0";
         };
 
         tile.addEventListener("mouseenter", onEnter);
         tile.addEventListener("mousemove", onMove);
         tile.addEventListener("mouseleave", onLeave);
-        tile.addEventListener("focus", (e) => onEnter(e));
-        tile.addEventListener("blur", onLeave);
       });
 
       function positionTooltip(e) {
         if (!tooltip) return;
         const pad = 14;
-        const x = (e.clientX ?? 0) + pad;
-        const y = (e.clientY ?? 0) + pad;
-
-        const rect = tooltip.getBoundingClientRect();
-        const maxX = window.innerWidth - rect.width - 12;
-        const maxY = window.innerHeight - rect.height - 12;
-
-        tooltip.style.left = `${Math.min(x, maxX)}px`;
-        tooltip.style.top = `${Math.min(y, maxY)}px`;
+        const x = e.clientX + pad;
+        const y = e.clientY + pad;
+        tooltip.style.left = `${Math.min(x, window.innerWidth - 260)}px`;
+        tooltip.style.top = `${Math.min(y, window.innerHeight - 100)}px`;
       }
 
-      // Smooth anchor scroll
+      // Smooth Anchor Scroll
       document.querySelectorAll('a[href^="#"]').forEach((a) => {
         a.addEventListener("click", (ev) => {
           const id = a.getAttribute("href");
@@ -544,260 +509,109 @@
           const el = document.querySelector(id);
           if (!el) return;
           ev.preventDefault();
-          el.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
-          history.pushState(null, "", id);
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
 
-      // Reel card keyboard toggle
-      document.querySelectorAll(".reelCard").forEach((card) => {
-        card.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            card.classList.toggle("active");
-          }
-        });
-      });
-
-      // Reel Navigation (Mobile swipe) - Desktop buttons removed
-      const reel = document.querySelector(".reel");
-      const reelInner = document.getElementById("reelInner");
-      const reelCards = gsap.utils.toArray(".reelCard");
-
-      let currentCardIndex = 0;
-      let startX = 0;
-      let isSwiping = false;
-
-      const getScrollAmount = () => {
-        const totalWidth = reelInner.scrollWidth;
-        const viewportWidth = reel.clientWidth;
-        return Math.max(0, totalWidth - viewportWidth);
-      };
-
-      const scrollToCard = (index) => {
-        if (!reelCards.length) return;
-        const card = reelCards[index];
-        const cardRect = card.getBoundingClientRect();
-        const reelInnerRect = reelInner.getBoundingClientRect();
-        const targetX = cardRect.left - reelInnerRect.left - (reel.clientWidth - cardRect.width) / 2;
-
-        gsap.to(reelInner, {
-          x: -targetX,
-          duration: 0.6,
-          ease: "power3.out",
-        });
-        currentCardIndex = index;
-      };
-
-      reelInner?.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-        isSwiping = true;
-      });
-
-      reelInner?.addEventListener("touchmove", (e) => {
-        if (!isSwiping) return;
-        const currentX = e.touches[0].clientX;
-        const diffX = currentX - startX;
-        if (Math.abs(diffX) > 10) {
-            e.preventDefault(); // Prevent vertical scroll if horizontal swipe is detected
-        }
-      });
-
-      reelInner?.addEventListener("touchend", (e) => {
-        if (!isSwiping) return;
-        const endX = e.changedTouches[0].clientX;
-        const diffX = endX - startX;
-        const swipeThreshold = 50; // pixels
-
-        if (diffX > swipeThreshold && currentCardIndex > 0) {
-          scrollToCard(currentCardIndex - 1); // Swipe right, go left
-        } else if (diffX < -swipeThreshold && currentCardIndex < reelCards.length - 1) {
-          scrollToCard(currentCardIndex + 1); // Swipe left, go right
-        } else {
-          scrollToCard(currentCardIndex); // Snap back if not enough swipe
-        }
-        isSwiping = false;
-      });
-
-
-      // GSAP Scroll Animations
+      // GSAP Animations
       if (!prefersReduced && window.gsap && window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.config({ ignoreMobileResize: true });
 
-        // Hero content reveal animation
-        const heroContentRevealItems = gsap.utils.toArray("#hero-content-reveal .hero-reveal-item");
-        gsap.from(heroContentRevealItems, {
-          y: 28,
-          opacity: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: "#hero-content-reveal",
-            start: "top 85%", // Start when top of section enters 85% down the viewport
-            end: "top 60%",   // End when top of section enters 60% down the viewport
-            toggleActions: "play none none reverse"
-          }
-        });
-
-        // Hero background parallax
+        // Hero Parallax
         gsap.to(".heroVid", {
           scale: 1.06,
           yPercent: 6,
           ease: "none",
-          scrollTrigger: {
-            trigger: ".hero",
-            start: "top top",
-            end: "bottom top",
-            scrub: true
-          }
+          scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
         });
 
-        // Background Audio Volume Control
-        if (backgroundAudio && !prefersReduced) {
-          gsap.to(backgroundAudio, {
-            volume: 0.1, // Lower volume when scrolled down
-            ease: "none",
-            scrollTrigger: {
-              trigger: "main", // Trigger across the entire main content
-              start: "top top",
-              end: "bottom bottom",
-              scrub: true,
-              onUpdate: self => {
-                if (soundOn) { // Only control if sound is explicitly ON
-                  const scrollProgress = self.progress; // 0 at top, 1 at bottom
-                  backgroundAudio.volume = 1 - (scrollProgress * 0.9); // Adjust 0.9 for min volume (1 - 0.9 = 0.1)
-                }
-              }
-            }
-          });
-        }
-
-
-        // Generic reveal
-        gsap.utils.toArray(".sectionHead, .lede, .quoteCard, .aboutCard, .portrait, .contactCard").forEach((el) => {
-          gsap.fromTo(el, { y: 28, opacity: 0 }, {
-            y: 0, opacity: 1, duration: 0.9, ease: "power3.out",
-            scrollTrigger: { trigger: el, start: "top 85%", end: "top 60%", toggleActions: "play none none reverse" }
-          });
-        });
-
-        // Marquee scrub drift
+        // Marquee
         gsap.to(".marqueeTrack", {
           xPercent: -18,
           ease: "none",
           scrollTrigger: { trigger: ".interrupt", start: "top bottom", end: "bottom top", scrub: true }
         });
 
-        // Horizontal reel scroll with background text reveal
-        const reelBgTextSpans = gsap.utils.toArray(".reelBgText span");
-        const totalScroll = getScrollAmount();
+        // --- REEL LOGIC ---
+        const reelInner = document.getElementById("reelInner");
+        
+        if (hasSeenReel) {
+          // A. RETURNING VISITOR: No Pin, Standard Scroll
+          console.log("Welcome back! Reel freeze disabled.");
+          reelContainer.classList.add("is-unlocked");
+          
+        } else {
+          // B. NEW VISITOR: Full Experience
+          const reelBgTextSpans = gsap.utils.toArray(".reelBgText span");
+          const getScrollAmount = () => reelInner.scrollWidth - reelContainer.clientWidth;
+          const totalScroll = getScrollAmount();
 
-        let reelTimeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".work",
-            start: "top 20%",
-            end: () => `+=${Math.max(700, totalScroll + 500)}`,
-            scrub: 1,
-            pin: ".reel",
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-            onUpdate: self => {
-                const scrollProgress = self.progress;
-                const cardWidth = reelCards[0]?.offsetWidth || 1;
-                const totalScrollableWidth = getScrollAmount();
-                const currentScrollX = scrollProgress * totalScrollableWidth;
-                currentCardIndex = Math.round(currentScrollX / (cardWidth + 18));
+          let reelTimeline = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".reel",
+              start: "center center", // Lock in the middle
+              end: () => `+=${Math.max(700, totalScroll + 500)}`,
+              scrub: 1,
+              pin: true,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+              onLeave: () => {
+                // User finished the scroll -> Mark as seen
+                localStorage.setItem("pb3_reel_seen", "true");
+              }
             }
-          }
-        });
-
-        reelTimeline.to(reelInner, {
-          x: () => -getScrollAmount(),
-          ease: "none",
-        }, 0);
-
-        reelBgTextSpans.forEach((span, i) => {
-          reelTimeline.to(span, {
-            opacity: 0.2,
-            y: 0,
-            scale: 1,
-            duration: 0.5,
-            ease: "power2.out"
-          }, i * 0.15);
-        });
-
-
-        window.addEventListener("resize", () => ScrollTrigger.refresh());
-
-        // Turd behind card: scroll reveal choreography
-        gsap.utils.toArray(".reelCard").forEach((card) => {
-          const turd = card.querySelector(".turdBehind");
-          const spec = card.querySelector(".turdSpec");
-          const reelRevealText = card.querySelector(".reelRevealText");
-          const side = card.getAttribute("data-turd-side") || "left";
-
-          if (!turd) return;
-
-          // Set initial positions
-          gsap.set(turd, { opacity: 0.02, scale: 0.88, rotate: side === "left" ? -8 : 8, xPercent: side === "left" ? -26 : 26, yPercent: 8 });
-          gsap.set(spec, { opacity: 0, xPercent: -120 });
-          gsap.set(reelRevealText, { y: 20, opacity: 0 });
-
-          // Reveal on view
-          const reveal = gsap.timeline({ paused: true, defaults: { ease: "power3.out" }});
-          reveal.to(turd, { opacity: 1, scale: 0.98, duration: 0.5 }, 0)
-                .to(turd, { xPercent: side === "left" ? -6 : 6, yPercent: 0, duration: 0.6 }, 0.05)
-                .to(spec, { opacity: 1, xPercent: 130, duration: 0.65, ease: "power2.out" }, 0.18)
-                .to(spec, { opacity: 0, duration: 0.25 }, 0.68)
-                .to(reelRevealText, { y: 0, opacity: 1, duration: 0.4 }, 0.1);
-
-          ScrollTrigger.create({
-            trigger: card,
-            containerAnimation: reelTimeline, // Use the main reel timeline
-            start: "left 92%",
-            end: "left 55%",
-            onEnter: () => reveal.play(0),
-            onLeave: () => reveal.reverse(),
-            onEnterBack: () => reveal.play(0),
-            onLeaveBack: () => reveal.reverse()
           });
 
-          // Hover = small extra peek (premium, restrained)
-          card.addEventListener("mouseenter", () => {
-            gsap.to(turd, { xPercent: side === "left" ? -2 : 2, duration: 0.25, ease: "power2.out" });
+          // Horizontal Move
+          reelTimeline.to(reelInner, {
+            x: () => -getScrollAmount(),
+            ease: "none",
+          }, 0);
+
+          // Text Reveal (Improved)
+          // Ensure spans start hidden
+          gsap.set(reelBgTextSpans, { autoAlpha: 0, y: 50, scale: 0.9 });
+          
+          reelBgTextSpans.forEach((span, i) => {
+            reelTimeline.to(span, {
+              autoAlpha: 0.25, // Using autoAlpha handles visibility+opacity
+              y: 0,
+              scale: 1,
+              duration: 0.5,
+              ease: "power2.out"
+            }, i * 0.15);
           });
-          card.addEventListener("mouseleave", () => {
-            gsap.to(turd, { xPercent: side === "left" ? -6 : 6, duration: 0.25, ease: "power2.out" });
+          
+          // Card Text Reveal
+          gsap.utils.toArray(".reelCard").forEach((card) => {
+            const txt = card.querySelector(".reelRevealText");
+            gsap.set(txt, { y: 20, opacity: 0 });
+            
+            // Simple trigger based on timeline position would be complex,
+            // so we stick to a simple viewport trigger for the text inside the pinned container
+            ScrollTrigger.create({
+               trigger: card,
+               containerAnimation: reelTimeline,
+               start: "left center",
+               end: "right center",
+               onEnter: () => gsap.to(txt, { y: 0, opacity: 1, duration: 0.4 }),
+               onLeave: () => gsap.to(txt, { y: 20, opacity: 0, duration: 0.4 }),
+               onEnterBack: () => gsap.to(txt, { y: 0, opacity: 1, duration: 0.4 }),
+               onLeaveBack: () => gsap.to(txt, { y: 20, opacity: 0, duration: 0.4 })
+            });
           });
-        });
+        }
+        // --- END REEL LOGIC ---
 
-        // Services tiles stagger
-        gsap.from(".serviceTile", {
-          y: 18,
-          opacity: 0,
-          duration: 0.7,
-          ease: "power3.out",
-          stagger: 0.08,
-          scrollTrigger: { trigger: ".services", start: "top 75%" }
-        });
-
-        // Contact card depth
-        gsap.to(".contactCard", {
-          y: -10,
-          ease: "none",
-          scrollTrigger: { trigger: ".contact", start: "top bottom", end: "bottom bottom", scrub: true }
-        });
-
-        // Footer turd group: subtle roll-in
-        gsap.fromTo(".turdGroup", { y: 50, opacity: 0 }, { // Changed x to y for vertical reveal
+        // Footer Reveal
+        gsap.fromTo(".turdGroup", { y: 50, opacity: 0 }, {
           y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
-          scrollTrigger: { trigger: ".contact", start: "bottom bottom" } // Trigger when contact section bottom hits viewport bottom
+          scrollTrigger: { trigger: ".contact", start: "bottom bottom" }
         });
         gsap.fromTo(".comicBubble", { y: 20, opacity: 0 }, {
           y: 0, opacity: 1, duration: 0.6, ease: "power2.out", delay: 0.3,
-          scrollTrigger: { trigger: ".contact", start: "bottom bottom" } // Trigger with turd group
+          scrollTrigger: { trigger: ".contact", start: "bottom bottom" }
         });
       }
     })();
