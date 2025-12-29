@@ -260,6 +260,8 @@ button{ font: inherit; color: inherit; }
   color: var(--fg);
   text-shadow: 0 24px 70px rgba(0,0,0,.55);
   position: relative;
+  /* --- ADD THIS LINE --- */
+  white-space: nowrap; /* This forces "WE SHOOT COOL SH💩T" to stay on one line */
 }
 .hero-content-reveal .heroTitleTag::after{
   content:"";
@@ -346,22 +348,19 @@ button{ font: inherit; color: inherit; }
   padding: 8px 10px;
   background: rgba(0,0,0,.20);
 }
-/* --- Turd 'i' replacement --- */
+/* --- Turd 'i' replacement (FIXED) --- */
 .turd-i {
-  /* Makes the image sit inline like text */
-  display: inline-block; 
-  
-  /* Sets height to 0.8em. 'em' means "relative to current font size". 
-     0.8 makes it slightly shorter than a capital letter, fitting nicely. */
-  height: 1.0em; 
-  width: auto; /* Maintains aspect ratio */
-  
-  /* Adjusts vertical alignment so it sits on the baseline correctly */
-  vertical-align: -0.08em; 
-  /* SQUEEZE FIX: Negative numbers pull the text closer */
-  margin: 0 -0.13em;
+  display: inline-block;
+  /* The !important ensures nothing else can make it huge */
+  height: 0.9em !important; 
+  /* A backup constraint just in case */
+  max-width: 1.2em; 
+  width: auto;
+  /* Fine-tuned alignment */
+  vertical-align: -0.1em; 
+  /* Adjusted squeeze */
+  margin: 0 -0.05em; 
 }
-
 /* Sections */
 .section{ padding: 96px 0; position: relative; }
 .wrap{ width: var(--wrap); margin: 0 auto; }
