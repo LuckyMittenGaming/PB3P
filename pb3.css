@@ -260,6 +260,8 @@ button{ font: inherit; color: inherit; }
   color: var(--fg);
   text-shadow: 0 24px 70px rgba(0,0,0,.55);
   position: relative;
+  /* --- ADD THIS LINE --- */
+  white-space: nowrap; /* This forces "WE SHOOT COOL SH💩T" to stay on one line */
 }
 .hero-content-reveal .heroTitleTag::after{
   content:"";
