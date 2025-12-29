@@ -841,7 +841,7 @@ button{ font: inherit; color: inherit; }
   margin-bottom: 5px; /* Tiny space between turds and copyright text */
 }
 .turdGroup .turd{
-  width: clamp(180px, 20vw, 300px);
+  width: clamp(235px, 26vw, 390px);
   height: auto;
   opacity: 1;
   filter: none;
